@@ -76,21 +76,9 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		boolean isSorted = false;
-		do {			
-			for(int i = 1; i < tabell.length - 1; i++){
-				int lastNum = tabell[0];
+		// TODO
+		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
 
-				if(tabell[i] < lastNum){
-					int temp = tabell[i];
-					tabell[i] = lastNum;
-					tabell[i-1] = temp;
-					break;
-				}
-			}
-		} while (!isSorted);
-		System.out.println(tabell);
-		return true;
 	}
 
 	// h)
