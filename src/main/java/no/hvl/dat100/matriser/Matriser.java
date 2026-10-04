@@ -2,11 +2,29 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 
+	public static void main(String[] args){
+
+		int[][] matriseHeltall = {
+			{1, 2, 3},
+			{4, 5, 6},
+			{7, 8, 9}
+		};
+
+		System.out.println("Oppgave 1");
+		skrivUt(matriseHeltall);
+
+		System.out.println("Oppgave 2");
+
+	}
+
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		for(int i = 0; i < matrise.length; i++){
+			for(int j = 0; j < matrise[i].length; j++){
+				System.out.println(matrise[i][j]);
+			}
+		}
 	}
 
 	// b)
