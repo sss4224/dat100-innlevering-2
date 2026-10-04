@@ -1,35 +1,59 @@
 package no.hvl.dat100.tabeller;
 
+import java.util.Arrays;
+
 public class Tabeller {
+
+	public static void main(String[] args){
+		int[] heltall = {1,2,3,4};
+
+		System.out.println("Oppgave 1");
+		skrivUt(heltall);
+
+		System.out.println("Oppgave 2");
+		System.out.println(tilStreng(heltall));
+
+		System.out.println("Oppgave 3");
+		System.out.println(summer(heltall));
+
+		System.out.println("Oppgave 4");
+		System.out.println(finnesTall(heltall, 4));
+	}
 
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-
-	}
-	
+		for(int i = 0; i < tabell.length; i++){
+			System.out.println(tabell[i]);
+		}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String newString = Arrays.toString(tabell).replaceAll("\\s", "");
+		return newString;
+
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int sum = 0;
+		for(int i = 0; i < tabell.length; i++){
+			sum += tabell[i];
+		}
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		for(int i = 0; i < tabell.length; i++){
+			if(tabell[i] == tall){
+				return true;
+			}
+		}
+		return false;
 
 	}
 
