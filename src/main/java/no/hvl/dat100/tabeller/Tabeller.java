@@ -26,7 +26,7 @@ public class Tabeller {
 		for(int i = 0; i < tabell.length; i++){
 			System.out.println(tabell[i]);
 		}
-
+	}
 	// b)
 	public static String tilStreng(int[] tabell) {
 
