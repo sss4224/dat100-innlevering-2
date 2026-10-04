@@ -34,23 +34,18 @@ public class Tabeller {
 	}
 
 	// e)
-public class Program {
-    public static void main(String[] args) {
-        int[] tallTabell = {4, 8, 12, 16, 20, 24};
-        int sokeTall = 16;
-        
-        int posisjon = posisjonTall(tallTabell, sokeTall);
-        System.out.println("Tallet ble funnet på posisjon: " + posisjon);
-    }
-
-    public static int posisjonTall(int[] tabell, int tall) {
-        for (int i = 0; i < tabell.length; i++) {
-            if (tabell[i] == tall) {
-                return i;
-            }
-        }
+public static int posisjonTall(int[] tabell, int tall) {
+    if (tabell == null) {
         return -1;
     }
+    
+    for (int i = 0; i < tabell.length; i++) {
+        if (tabell[i] == tall) {
+            return i;
+        }
+    }
+    
+    return -1;
 }
 
 	// f)
