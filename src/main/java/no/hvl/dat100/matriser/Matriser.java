@@ -76,26 +76,23 @@ public class Matriser {
 	}
 
 	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+	public static boolean erLik(int[][] mat1, int[][] mat2) {
+    if (mat1 == null || mat2 == null || mat1.length != mat2.length) {
+        return false;
+    }
 
-		if(a.length != b.length){
-			return false;
-		}
-
-		for(int i = 0; i < a.length; i++){
-			if(a[i].length != a[i].length){
-				return false;
-			}
-			for(int j = 0; j < a[i].length; j++){
-				if(a[i][j] != b[i][j]){
-					return false;
-				}
-			}
-		}
-
-		return true;
-		
-	}
+    for (int i = 0; i < mat1.length; i++) {
+        if (mat1[i].length != mat2[i].length) {
+            return false;
+        }
+        for (int j = 0; j < mat1[i].length; j++) {
+            if (mat1[i][j] != mat2[i][j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
